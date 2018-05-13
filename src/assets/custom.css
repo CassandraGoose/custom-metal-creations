@@ -1,0 +1,40 @@
+.margin-top {
+  margin-top: 5em;
+}
+
+#image-max {
+  max-height: 300px !important;
+  max-width: 400px !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html {
+  color: #97abb1 !important;
+}
+
+p {
+  color: #97abb1 !important;
+}
+
+div {
+  color: #97abb1 !important;
+}
+
+a {
+  font-family: 'Inika', serif;
+  color: #97abb1 !important;
+}
+
+a:hover {
+  color: #66dbff !important;
+}
+
+.extra-top {
+  margin-top: 8em;
+}
+
+.is-vertical-center {
+  display: flex;
+  align-items: center;
+}
