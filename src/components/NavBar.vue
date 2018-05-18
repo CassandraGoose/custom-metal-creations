@@ -17,6 +17,10 @@
       <a class="navbar-item">
         <router-link to="/Press">IN THE PRESS</router-link>
       </a>
+
+      <a class="navbar-item">
+        <router-link to="/newItem">Add New Art</router-link>
+      </a>
     </div>
   </nav>
 </template>

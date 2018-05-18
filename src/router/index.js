@@ -5,6 +5,8 @@ import ListItems from '@/components/ListItems'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Press from '@/components/Press'
+import newItem from '@/components/newItem'
+import Admin from '@/components/Admin'
 
 Vue.use(Router);
 
@@ -30,6 +32,14 @@ export default new Router({
     {
       path: '/Press',
       component: Press,
+    },
+    {
+      path: '/newItem',
+      component: newItem,
+    },
+    {
+      path: '/admin',
+      component: Admin,
     },
   ],
 });
