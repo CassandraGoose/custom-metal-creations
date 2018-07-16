@@ -5,6 +5,7 @@ Made with ❤︎ by: <a href="https://cassandratorske.com">Cassandra!</a>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'Footer',
 }

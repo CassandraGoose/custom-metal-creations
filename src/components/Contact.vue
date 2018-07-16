@@ -4,11 +4,16 @@
     <div class="columns margin-top">
     </div>
       <div class="is-one-half column margin-top">
-        If you have any comments or questions, please contact Terry at <a href="mailto:old61amos@gmail.com">old61amos@gmail.com</a>.
-      </br>
        Check out the CMC Facebook Page <a href="https://www.facebook.com/CMCMETALART/" target="_blank">HERE</a>.
-      </div>
+        <p>Or Contact Custom Metal Creations below...</p>
+       <br />
+       <br />
 
+        <div class="control has-text-centered">
+          <a class="button" href="mailto:old61amos@gmail.com">Email Custom Metal Creations</a>
+        </div>
+
+      </div>
 
       <figure id="image-max" class="image margin-top">
         <img src="../assets/aboutlogo.png" alt="Logo">
@@ -20,6 +25,8 @@
 </template>
 
 <script>
+/* eslint-disable */
+
 export default {
 }
 </script>

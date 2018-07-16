@@ -3,14 +3,13 @@
   <div  class="card">
     <div class="card-image">
       <figure class="image">
-        <img src="../assets/cham.jpg" alt="Placeholder image">
+        <img :src="makeJPG" alt="item.title" @click="showModal = true">
       </figure>
     </div>
     <div class="card-content">
+      {{this.item.title}}
       <div class="content">
-        description here
-        <br />
-        <a @click="showModal = true">View</a>
+        {{this.item.description}}
       </div>
     </div>
   </div>
@@ -18,7 +17,7 @@
     <div class="modal-background"></div>
     <div class="modal-content">
       <p class="image">
-        <img src="image" alt="image">
+        <img :src="makeJPG" alt="image unavailable">
       </p>
     </div>
     <button class="is-large modal-close" aria-label="close"  @click="showModal = false"></button>
@@ -27,14 +26,20 @@
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'ListItems',
-  props: ['items'],
+  props: ['item'],
   data() {
     return {
       showModal: false,
     }
   },
+  computed: {
+    makeJPG() {
+      return `${this.item.img_url}.jpg`
+    }
+  }
 };
 </script>
 

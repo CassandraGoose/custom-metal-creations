@@ -3,8 +3,8 @@
     <figure id="image-max" class="image margin-top">
       <img src="../assets/aboutlogo.png" alt="Logo">
     </figure>
-      <div class="columns is-multiline">
-        <div class="column is-4" v-for="item in items">
+      <div id="masonry" class="more-container">
+        <div class="full-100 slight-margin" v-for="item in items">
           <ListItems :item="item"></ListItems>
         </div>
       </div>
@@ -12,7 +12,9 @@
 </template>
 
 <script>
+/* eslint-disable */
 import ListItems from './ListItems';
+const URL = 'https://custom-metal-creations.herokuapp.com/items'
 
 export default {
   name: 'HomePage',
@@ -21,18 +23,16 @@ export default {
   },
   data() {
     return {
-      items: [
-        'item1',
-        'item2',
-        'item3',
-        'item4',
-        'item5',
-        'item6',
-        'item7',
-        'item8',
-        'item9',
-      ],
+      items: '',
     };
+  },
+  mounted() {
+    console.log('whooooot');
+    fetch(URL).then(res => {
+      return res.json()
+    }).then(data => {
+      this.items = data;
+    })
   },
 };
 </script>

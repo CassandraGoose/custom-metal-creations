@@ -26,6 +26,14 @@ a {
   color: #97abb1 !important;
 }
 
+.view {
+  color: #36deff !important;
+}
+
+.view:hover {
+  color: #ffa55b !important;
+}
+
 a:hover {
   color: #66dbff !important;
 }
@@ -37,4 +45,33 @@ a:hover {
 .is-vertical-center {
   display: flex;
   align-items: center;
+}
+
+.more-container {
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+#masonry {
+  column-count: 3 !important;
+}
+
+.full-100 {
+  width: 100%;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari */
+  page-break-inside: avoid;           /* Theoretically FF 20+ */
+  break-inside: avoid-column;
+}
+
+.slight-margin {
+  margin-bottom: 1em;
+}
+
+@media only screen and (max-width: 400px) {
+    .full-100 {
+      width: 100% !important;
+    }
+    #masonry {
+      column-count: 1 !important;
+    }
 }

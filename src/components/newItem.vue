@@ -1,7 +1,12 @@
 <template lang="html">
   <div class="margin-top container">
 
-    <h4>Hello! This page can only be seen by you when you are logged in. If you make a new piece of metal art and want it to show up on the website, fill out the form below. When you press 'submit', the image will be stored online and the information will be sent to my database. The site should have the new artwork. Let me know if it ever breaks. </h4>
+    <h4>Hello! This page can only be seen by you when you are logged in.
+      If you make a new piece of metal art and want it to show up on the
+      website, fill out the form below. When you press 'submit',
+      the image will be stored online and the information will be
+      sent to my database. The site should have the new artwork.
+      Let me know if it ever breaks. </h4>
 
     <br />
 
@@ -40,6 +45,8 @@
 </template>
 
 <script>
+const URL = 'http://localhost:3000/new-item'
+/* eslint-disable */
 export default {
   name: 'newItem',
   data() {
@@ -61,13 +68,19 @@ export default {
       reader.readAsDataURL(file);
     },
     submitItem() {
-      const item = {
+      const payload = {
         title: this.title ,
         description: this.description,
         image: this.files[0],
       }
-      console.log(item)
-      // make call to server here.
+      fetch(URL, {
+             method: 'POST',
+             body: JSON.stringify(payload),
+             headers: { 'content-type': 'application/json' }
+         }).then((res) => res.json())
+         .then((data) => data)
+         .catch((err)=> console.log(err))
+
     }
   },
 }
