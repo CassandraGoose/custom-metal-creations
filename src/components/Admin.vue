@@ -18,7 +18,7 @@
 </template>
 
 <script>
-const URL = 'https://custom-metal-creations.herokuapp.com/users/login'
+const URL = 'https://custom-metal-creations.herokuapp.com/users/login';
 /* eslint-disable */
 export default {
   name: 'Admin',

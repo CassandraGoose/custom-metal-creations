@@ -20,7 +20,11 @@
     <div class="field">
       <label class="label">Description</label>
       <div class="control">
-        <textarea class="textarea" v-model="description" placeholder="Description here..."></textarea>
+        <textarea
+          class="textarea"
+          v-model="description"
+          placeholder="Description here...">
+          </textarea>
       </div>
       <p class="help">Optional</p>
     </div>
@@ -45,7 +49,7 @@
 </template>
 
 <script>
-const URL = 'http://localhost:3000/new-item'
+const URL = 'http://localhost:3000/new-item';
 /* eslint-disable */
 export default {
   name: 'newItem',

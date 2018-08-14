@@ -1,9 +1,10 @@
 <template lang="html">
   <div>
+    <b-loading :is-full-page="isFullPage" :active.sync="isLoading"></b-loading>
   <div  class="card">
     <div class="card-image">
       <figure class="image">
-        <img :src="makeJPG" alt="item.title" @click="showModal = true">
+        <img @load="loading" :src="makeJPG" alt="item.title" @click="showModal = true">
       </figure>
     </div>
     <div class="card-content">
@@ -33,13 +34,20 @@ export default {
   data() {
     return {
       showModal: false,
+      isFullPage: false,
+      isLoading: true,
     }
+  },
+  methods: {
+    loading() {
+      this.isLoading = !this.isLoading;
+    },
   },
   computed: {
     makeJPG() {
       return `${this.item.img_url}.jpg`
     }
-  }
+  },
 };
 </script>
 

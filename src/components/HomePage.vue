@@ -1,10 +1,13 @@
 <template>
   <div class="container margin-top">
-    <figure id="image-max" class="image margin-top">
+    <figure id="image-max" class="image">
       <img src="../assets/aboutlogo.png" alt="Logo">
     </figure>
       <div id="masonry" class="more-container">
-        <div class="full-100 slight-margin" v-for="item in items">
+        <div
+          class="full-100 slight-margin"
+          v-for="item in items"
+          >
           <ListItems :item="item"></ListItems>
         </div>
       </div>
